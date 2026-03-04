@@ -15,7 +15,14 @@
     <File Path="AI-Guidelines.md" />
   </Folder>
   <Folder Name="/src/">
+    <Project Path="src/Metria.EmailWorker.Application/Metria.EmailWorker.Application.csproj" />
+    <Project Path="src/Metria.EmailWorker.Domain/Metria.EmailWorker.Domain.csproj" />
+    <Project Path="src/Metria.EmailWorker.Infrastructure/Metria.EmailWorker.Infrastructure.csproj" />
+    <Project Path="src/Metria.EmailWorker.Worker/Metria.EmailWorker.Worker.csproj" />
     <Project Path="src/Metria.Worker/Metria.Worker.csproj" />
   </Folder>
-  <Folder Name="/test/" />
+  <Folder Name="/test/">
+    <Project Path="test/Metria.EmailWorker.Application.UnitTests/Metria.EmailWorker.Application.UnitTests.csproj" />
+    <Project Path="test/Metria.EmailWorker.Infrastructure.IntegrationTests/Metria.EmailWorker.Infrastructure.IntegrationTests.csproj" />
+  </Folder>
 </Solution>

@@ -9,8 +9,8 @@ docker run -d \
   -p 15672:15672 \
   rabbitmq:3-management
 
-## Run Worker
+## Run Processor
 
 dotnet restore
 dotnet ef database update
-dotnet run --project src/Metria.EmailWorker.Worker
+dotnet run --project src/Metria.EmailWorker.Processor

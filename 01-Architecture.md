@@ -25,7 +25,7 @@ Clean Architecture with strict boundaries.
 - Migrations
 - Logging adapter
 
-### Worker (Host)
+### Processor (Host)
 - BackgroundService
 - DI container
 - HealthChecks
@@ -36,4 +36,36 @@ Clean Architecture with strict boundaries.
 - Domain -> no dependencies
 - Application -> depends only on Domain
 - Infrastructure -> depends on Application
-- Worker -> depends on Application + Infrastructure
+- Processor -> depends on Application + Infrastructure
+
+## Structure
+- src/
+  - Metria.EmailWorker.Domain/
+    - Entities/
+    - ValueObjects/
+    - Enums/
+    - Exceptions/
+  - Metria.EmailWorker.Application/
+    - Abstractions/
+    - Contracts/
+    - Exceptions/
+    - Models/
+    - UseCases/
+    - Validation/
+  - Metria.EmailWorker.Infrastructure/
+    - Configuration/
+    - DependencyInjection/
+    - Email/
+    - Messaging/
+    - Observability/
+    - Persistence/
+    - Time/
+  - Metria.EmailWorker.Processor/
+    - Extensions/
+    - HealthChecks/
+    - HostedServices/
+    - Program.cs
+- test/
+  - Metria.EmailWorker.Application.UnitTests/
+  - Metria.EmailWorker.Infrastructure.IntegrationTests/
+
